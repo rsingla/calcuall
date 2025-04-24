@@ -18,7 +18,6 @@ import {
   Percent,
   Activity,
   Scale,
-  ArrowLeft,
 } from "lucide-react";
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -65,12 +64,12 @@ const navigation = [
   },
 ];
 
-function CalculatorCard({ title, href, icon }: CalculatorCardProps) {
+function CalculatorCard({ title, href, icon: Icon }: CalculatorCardProps) {
   return (
     <Card className="h-48 flex flex-col justify-between">
       <CardHeader>
         <CardTitle className="flex items-center">
-          <icon className="mr-2 h-4 w-4" />
+          <Icon className="mr-2 h-4 w-4" />
           {title}
         </CardTitle>
       </CardHeader>
@@ -121,13 +120,6 @@ export default function HomePage() {
       <main className="flex flex-1 flex-col p-4">
         <div className="md:hidden flex items-center justify-between mb-4">
           <SidebarTrigger className="mr-4" />
-          {isMobile && (
-            <Button variant="ghost" size="icon" asChild>
-              <Link href="/">
-                <ArrowLeft className="h-5 w-5" />
-              </Link>
-            </Button>
-          )}
         </div>
         <Tabs defaultValue="calculator" className="w-full">
           <TabsList className="grid w-full grid-cols-2 md:grid-cols-3">
