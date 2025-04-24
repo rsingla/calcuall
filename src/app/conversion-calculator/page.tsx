@@ -7,6 +7,7 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/compo
 import {Label} from "@/components/ui/label"
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import Link from 'next/link';
+import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion"
 
 export default function ConversionCalculator() {
   const [inputValue, setInputValue] = useState('');
@@ -33,26 +34,33 @@ export default function ConversionCalculator() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
-        <div className="flex justify-between w-full max-w-md mb-4">
-            <Button asChild>
-                <Link href="/">Home</Link>
-            </Button>
-            <Button asChild>
-                <Link href="/simple-calculator">Simple Calculator</Link>
-            </Button>
-            <Button asChild>
-                <Link href="/interest-calculator">Interest Calculator</Link>
-            </Button>
-            <Button asChild>
-                <Link href="/mortgage-calculator">Mortgage Calculator</Link>
-            </Button>
-            <Button asChild>
-                <Link href="/bmi-calculator">BMI Calculator</Link>
-            </Button>
-            <Button asChild>
-                <Link href="/scientific-calculator">Scientific Calculator</Link>
-            </Button>
-        </div>
+        <Accordion type="single" collapsible className="w-full max-w-md mb-4">
+            <AccordionItem value="navigation">
+                <AccordionTrigger>Navigation</AccordionTrigger>
+                <AccordionContent>
+                    <div className="flex flex-wrap gap-2">
+                        <Button asChild>
+                            <Link href="/">Home</Link>
+                        </Button>
+                        <Button asChild>
+                            <Link href="/simple-calculator">Simple Calculator</Link>
+                        </Button>
+                        <Button asChild>
+                            <Link href="/interest-calculator">Interest Calculator</Link>
+                        </Button>
+                        <Button asChild>
+                            <Link href="/mortgage-calculator">Mortgage Calculator</Link>
+                        </Button>
+                        <Button asChild>
+                            <Link href="/bmi-calculator">BMI Calculator</Link>
+                        </Button>
+                        <Button asChild>
+                            <Link href="/scientific-calculator">Scientific Calculator</Link>
+                        </Button>
+                    </div>
+                </AccordionContent>
+            </AccordionItem>
+        </Accordion>
       <Card className="w-full max-w-md">
         <CardHeader>
           <CardTitle>Conversion Calculator</CardTitle>
@@ -107,3 +115,4 @@ export default function ConversionCalculator() {
     </div>
   );
 }
+
