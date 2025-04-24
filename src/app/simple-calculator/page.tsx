@@ -1,4 +1,3 @@
-
 "use client";
 
 import {useState} from 'react';
@@ -6,6 +5,7 @@ import {Button} from '@/components/ui/button';
 import {Input} from '@/components/ui/input';
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
 import {useToast} from "@/hooks/use-toast"
+import Link from 'next/link';
 
 export default function SimpleCalculator() {
   const [displayValue, setDisplayValue] = useState('0');
@@ -96,6 +96,9 @@ export default function SimpleCalculator() {
           </div>
         </CardContent>
       </Card>
+        <Button asChild>
+            <Link href="/">Home</Link>
+        </Button>
     </div>
   );
 }

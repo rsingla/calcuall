@@ -1,4 +1,3 @@
-
 "use client";
 
 import {useState} from 'react';
@@ -7,6 +6,7 @@ import {Input} from '@/components/ui/input';
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
 import {Label} from "@/components/ui/label"
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import Link from 'next/link';
 
 export default function ConversionCalculator() {
   const [inputValue, setInputValue] = useState('');
@@ -84,6 +84,9 @@ export default function ConversionCalculator() {
           </div>
         </CardContent>
       </Card>
+        <Button asChild>
+            <Link href="/">Home</Link>
+        </Button>
     </div>
   );
 }

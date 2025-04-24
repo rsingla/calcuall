@@ -1,4 +1,3 @@
-
 "use client";
 
 import {useState} from 'react';
@@ -6,6 +5,7 @@ import {Button} from '@/components/ui/button';
 import {Input} from '@/components/ui/input';
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
 import {Label} from "@/components/ui/label"
+import Link from 'next/link';
 
 export default function MortgageCalculator() {
   const [loanAmount, setLoanAmount] = useState('');
@@ -63,6 +63,9 @@ export default function MortgageCalculator() {
           </div>
         </CardContent>
       </Card>
+        <Button asChild>
+            <Link href="/">Home</Link>
+        </Button>
     </div>
   );
 }
