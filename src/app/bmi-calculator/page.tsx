@@ -35,6 +35,26 @@ export default function BmiCalculator() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
+        <div className="flex justify-between w-full max-w-md mb-4">
+            <Button asChild>
+                <Link href="/">Home</Link>
+            </Button>
+            <Button asChild>
+                <Link href="/simple-calculator">Simple Calculator</Link>
+            </Button>
+            <Button asChild>
+                <Link href="/interest-calculator">Interest Calculator</Link>
+            </Button>
+            <Button asChild>
+                <Link href="/mortgage-calculator">Mortgage Calculator</Link>
+            </Button>
+            <Button asChild>
+                <Link href="/conversion-calculator">Conversion Calculator</Link>
+            </Button>
+            <Button asChild>
+                <Link href="/scientific-calculator">Scientific Calculator</Link>
+            </Button>
+        </div>
       <Card className="w-full max-w-md">
         <CardHeader>
           <CardTitle>BMI Calculator</CardTitle>
@@ -66,9 +86,6 @@ export default function BmiCalculator() {
           </div>
         </CardContent>
       </Card>
-        <Button asChild>
-            <Link href="/">Home</Link>
-        </Button>
     </div>
   );
 }
